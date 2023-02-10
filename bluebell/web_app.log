@@ -1,0 +1,11 @@
+{"level":"DEBUG","time":"2023-02-10T17:56:51.596+0800","caller":"bluebell/main.go:36","msg":"logger init success..."}
+{"level":"INFO","time":"2023-02-10T18:01:16.435+0800","caller":"bluebell/main.go:72","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-10T18:01:16.435+0800","caller":"bluebell/main.go:81","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-10T18:01:25.339+0800","caller":"bluebell/main.go:36","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-02-10T18:01:25.355+0800","caller":"mysql/mysql.go:25","msg":"connect DB failed","error":"Error 1049 (42000): Unknown database 'bluebell'"}
+{"level":"DEBUG","time":"2023-02-10T18:01:59.070+0800","caller":"bluebell/main.go:36","msg":"logger init success..."}
+{"level":"INFO","time":"2023-02-10T19:24:08.308+0800","caller":"bluebell/main.go:72","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-10T19:24:08.428+0800","caller":"bluebell/main.go:81","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-10T19:55:28.726+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"INFO","time":"2023-02-10T19:56:24.690+0800","caller":"bluebell/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-10T19:56:24.691+0800","caller":"bluebell/main.go:90","msg":"Server exiting"}
