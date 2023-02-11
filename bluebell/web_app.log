@@ -9,3 +9,76 @@
 {"level":"DEBUG","time":"2023-02-10T19:55:28.726+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
 {"level":"INFO","time":"2023-02-10T19:56:24.690+0800","caller":"bluebell/main.go:81","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2023-02-10T19:56:24.691+0800","caller":"bluebell/main.go:90","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T14:01:17.330+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"DEBUG","time":"2023-02-11T14:01:49.146+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-02-11T14:02:49.847+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"invalid character '-' in numeric literal"}
+{"level":"INFO","time":"2023-02-11T14:02:49.848+0800","caller":"logger/logger.go:70","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0.0007658}
+{"level":"INFO","time":"2023-02-11T14:04:02.373+0800","caller":"logger/logger.go:70","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0.0011962}
+{"level":"INFO","time":"2023-02-11T14:32:41.085+0800","caller":"bluebell/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-11T14:32:41.085+0800","caller":"bluebell/main.go:90","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T14:32:45.759+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-02-11T14:32:55.064+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-02-11T14:32:55.064+0800","caller":"logger/logger.go:70","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0.0000555}
+{"level":"INFO","time":"2023-02-11T14:33:42.392+0800","caller":"bluebell/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-11T14:33:42.392+0800","caller":"bluebell/main.go:90","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T14:33:46.225+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-02-11T14:33:52.751+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-02-11T14:33:52.751+0800","caller":"logger/logger.go:70","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0.0005436}
+{"level":"INFO","time":"2023-02-11T14:36:59.787+0800","caller":"bluebell/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-11T14:36:59.787+0800","caller":"bluebell/main.go:90","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T14:47:01.256+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-02-11T14:47:05.410+0800","caller":"controller/user.go:21","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-02-11T14:47:05.410+0800","caller":"logger/logger.go:70","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0}
+{"level":"INFO","time":"2023-02-11T14:49:53.556+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-11T14:49:53.557+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T14:51:02.435+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-02-11T14:51:08.362+0800","caller":"controller/user.go:21","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-02-11T14:51:08.362+0800","caller":"logger/logger.go:70","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0}
+{"level":"INFO","time":"2023-02-11T14:53:21.969+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-11T14:53:21.969+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T14:53:25.517+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"INFO","time":"2023-02-11T14:53:30.026+0800","caller":"logger/logger.go:70","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0.000559}
+{"level":"INFO","time":"2023-02-11T14:53:36.484+0800","caller":"logger/logger.go:70","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0.0018633}
+{"level":"INFO","time":"2023-02-11T14:54:47.154+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-11T14:54:47.154+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T14:54:51.516+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-02-11T14:54:55.757+0800","caller":"controller/user.go:21","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2023-02-11T14:54:55.758+0800","caller":"logger/logger.go:70","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0.0005317}
+{"level":"INFO","time":"2023-02-11T14:57:52.761+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-11T14:57:52.768+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T14:57:56.584+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-02-11T14:58:02.073+0800","caller":"controller/user.go:21","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2023-02-11T14:58:02.073+0800","caller":"logger/logger.go:70","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0}
+{"level":"INFO","time":"2023-02-11T16:02:16.117+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-11T16:02:16.119+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T16:04:03.365+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"INFO","time":"2023-02-11T16:04:17.040+0800","caller":"logger/logger.go:70","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0.0424575}
+{"level":"ERROR","time":"2023-02-11T16:04:28.485+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2023-02-11T16:04:28.485+0800","caller":"logger/logger.go:70","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0}
+{"level":"INFO","time":"2023-02-11T16:27:04.694+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-11T16:27:04.696+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T16:27:20.396+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-02-11T16:27:29.801+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2023-02-11T16:27:29.804+0800","caller":"logger/logger.go:81","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0.0029915}
+{"level":"INFO","time":"2023-02-11T16:28:33.538+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-11T16:28:33.539+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T16:28:37.549+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-02-11T16:28:42.155+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2023-02-11T16:28:42.155+0800","caller":"logger/logger.go:81","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0.0009659}
+{"level":"INFO","time":"2023-02-11T16:28:55.160+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-11T16:28:55.160+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T16:28:58.468+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"INFO","time":"2023-02-11T17:05:24.959+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-11T17:05:24.961+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T17:06:46.729+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"ERROR","time":"2023-02-11T17:07:03.791+0800","caller":"controller/user.go:20","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'required' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2023-02-11T17:07:03.809+0800","caller":"logger/logger.go:81","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0.0179533}
+{"level":"ERROR","time":"2023-02-11T17:07:12.811+0800","caller":"controller/user.go:69","msg":"Login with invalid param","error":"用户不存在"}
+{"level":"INFO","time":"2023-02-11T17:07:12.811+0800","caller":"logger/logger.go:81","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0.0019678}
+{"level":"ERROR","time":"2023-02-11T17:07:20.733+0800","caller":"controller/user.go:52","msg":"Login with invalid param","error":"Key: 'ParamLogin.password' Error:Field validation for 'password' failed on the 'required' tag"}
+{"level":"INFO","time":"2023-02-11T17:07:20.734+0800","caller":"logger/logger.go:81","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0.0010433}
+{"level":"INFO","time":"2023-02-11T17:07:30.049+0800","caller":"logger/logger.go:81","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"ApiPOST Runtime +https://www.apipost.cn","errors":"","cost":0}
+{"level":"INFO","time":"2023-02-11T22:38:59.458+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2023-02-11T22:38:59.608+0800","caller":"bluebell/main.go:95","msg":"Server exiting"}
+{"level":"DEBUG","time":"2023-02-11T22:39:08.240+0800","caller":"bluebell/main.go:39","msg":"logger init success..."}
+{"level":"INFO","time":"2023-02-11T22:39:24.829+0800","caller":"bluebell/main.go:86","msg":"Shutdown Server ..."}

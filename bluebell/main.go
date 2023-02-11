@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bluebell/controller"
 	"bluebell/dao/mysql"
 	"bluebell/dao/redis"
 	"bluebell/logger"
@@ -16,7 +17,6 @@ import (
 	"syscall"
 	"time"
 
-
 	"go.uber.org/zap"
 )
 
@@ -31,7 +31,7 @@ func main() {
 	fmt.Println(settings.Conf)
 	fmt.Println(settings.Conf.LogConfig == nil)
 	//2.初始化日志
-	if err := logger.Init(settings.Conf.LogConfig); err != nil {
+	if err := logger.Init(settings.Conf.LogConfig,settings.Conf.Mode); err != nil {
 		fmt.Printf("init logger failed err:%v\n", err)
 		return
 	}
@@ -54,8 +54,13 @@ func main() {
 		fmt.Printf("init snowflake failed err:%v\n", err)
 		return
 	}
+	//初始化gin框架内置的校验器的使用的翻译器
+	if err := controller.InitTrans("zh");err != nil{
+		fmt.Printf("init validator trans failed,err%v\n",err)
+		return
+	}
 	//5.注册路由
-	r := routes.Setup(settings.Conf.Mode)
+	r := routes.SetupRouter(settings.Conf.Mode)
 	//6.启动服务(优雅关机)
 	fmt.Println(settings.Conf.Port)
 	srv := &http.Server{
