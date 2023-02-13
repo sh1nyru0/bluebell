@@ -5,18 +5,13 @@ import (
 	"crypto/md5"
 	"database/sql"
 	"encoding/hex"
-	"errors"
 )
 
 //把每一步数据库操作封装成函数
 //待logic层根据业务需求调用
 
 const secret = "123456"
-var (
-	ErrorUserExist = errors.New("用户已存在")
-	ErrorUserNoExist = errors.New("用户不存在")
-	ErrorInvaildPassword = errors.New("密码错误")
-)
+
 
 // CheckUserExist 检查指定用户名的用户是否存在
 func CheckUserExist(username string) (err error) {
@@ -61,7 +56,15 @@ func Login(user *models.User)(err error){
 	// 判断密码是否正确
 	password := encryptPassword(oPassword)
 	if password != user.Password {
-		return ErrorInvaildPassword
+		return ErrorInvalidPassword
 	}
+	return
+}
+
+// GetUserById 根据id获取用户信息
+func GetUserById(uid int64)(user *models.User,err error){
+	user = new(models.User)
+	sqlStr := `select user_id, username from user where user_id = ?`
+	err = db.Get(user,sqlStr,uid)
 	return
 }

@@ -63,10 +63,10 @@ func LoginHandler(c *gin.Context){
 	if err != nil{
 		zap.L().Error("Login with invalid param",zap.String("username",p.Username),zap.Error(err))
 		if errors.Is(err,mysql.ErrorUserNoExist){
-			ResponseError(c,CodeInvaildPassword)
+			ResponseError(c,CodeInvalidPassword)
 			return
 		}
-		ResponseError(c,CodeInvaildPassword)
+		ResponseError(c,CodeInvalidPassword)
 		return
 	}
 	// 3.返回响应

@@ -7,11 +7,11 @@ const (
 	CodeInvaildParam
 	CodeUserExist
 	CodeUserNoExist
-	CodeInvaildPassword
+	CodeInvalidPassword
 	CodeServerBusy
 
 	CodeNeedLogin
-	CodeInvaildToken	
+	CodeInvalidToken	
 )
 
 var codeMsgMap = map[ResCode]string{
@@ -19,11 +19,11 @@ var codeMsgMap = map[ResCode]string{
 	CodeInvaildParam:    "请求参数错误",
 	CodeUserExist:       "用户名已存在",
 	CodeUserNoExist:     "用户名不存在",
-	CodeInvaildPassword: "用户名或密码错误",
+	CodeInvalidPassword: "用户名或密码错误",
 	CodeServerBusy:      "服务繁忙",
 
 	CodeNeedLogin: "需要登录",
-	CodeInvaildToken: "无效的token",
+	CodeInvalidToken: "无效的token",
 	
 }
 

@@ -4,7 +4,6 @@ import (
 	"bluebell/controller"
 	"bluebell/logger"
 	"bluebell/middlewares"
-	"bluebell/settings"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -22,14 +21,15 @@ func SetupRouter(mode string) *gin.Engine {
 	v1.POST("/signup",controller.SignUpHandler)
 	v1.POST("/login",controller.LoginHandler)
 
-	v1.GET("/ping",middlewares.JWTAuthMiddleware(),func(c *gin.Context) {
-		//如果是登录的用户,判断请求头中是否有 有效的JWT ？	
-		c.String(http.StatusOK,"ping")
-	})
+	v1.Use(middlewares.JWTAuthMiddleware()) //应用JWT认证中间件
 
-	v1.GET("/version", func(c *gin.Context) {
-		c.String(http.StatusOK, settings.Conf.Version)
-	})
+	{
+		v1.GET("/community",controller.CommunityHandler)
+		v1.GET("/community/:id",controller.CommunityDetailHandler)
+		v1.POST("/post",controller.CreatePostHandler)
+		v1.GET("/post/:id",controller.GetPostHandler)
+	}
+
 
 	r.NoRoute(func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{

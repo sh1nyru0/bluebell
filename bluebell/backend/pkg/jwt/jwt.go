@@ -1,12 +1,11 @@
 package jwt
 
 import (
-	"github.com/dgrijalva/jwt-go"
-	"time"
 	"errors"
-)
+	"time"
 
-const TokenExpireDuration = time.Hour * 24
+	"github.com/dgrijalva/jwt-go"
+)
 
 // mySecret 用于加盐的字符串
 var mySecret = []byte("夏天夏天悄悄过去")
@@ -21,6 +20,8 @@ type MyClaims struct {
 	Username string `json:"username"`
 	jwt.StandardClaims
 }
+
+const TokenExpireDuration = time.Hour * 24
 
 // GenToken 生成JWT
 func GenToken(UserID int64,username string) (string, error) {
