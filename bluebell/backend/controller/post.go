@@ -9,6 +9,8 @@ import (
 	"go.uber.org/zap"
 )
 
+
+
 // CreatePostHandler创建帖子的处理函数
 func CreatePostHandler(c *gin.Context){
 	//1.获取参数及参数的校验
@@ -70,6 +72,36 @@ func GetPostListHandler(c *gin.Context){
 	if err != nil{
 		zap.L().Error("logic.GetPostList() failed",zap.Error(err))
 		ResponseError(c,CodeServerBusy)
+	}
+	ResponseSuccess(c,data)
+	// 返回响应
+}
+
+// GetPostListHandler2升级版帖子列表接口
+// 根据前端传来的参数动态获取帖子列表
+// 按创建时间排序 或者 按照分数排序
+// 1.获取参数
+// 2.去redis查询id列表
+// 3.根据id去数据库查询帖子详细信息
+func GetPostListHandler2(c *gin.Context){
+	// GET请求参数(query string)：/api/v1/posts2?page=1&size=10&order=time
+	// 初始化结构体时指定初始参数
+	p := &models.ParamPostList{
+		Page: 1,
+		Size: 10,
+		Order: models.OrderTime,
+	}
+	if err := c.ShouldBindQuery(p);err != nil{
+		zap.L().Error("GetPostListHandler2 with invalid params",zap.Error(err))
+		ResponseError(c,CodeInvaildParam)
+		return
+	}
+	// 获取数据
+	data,err := logic.GetPostList2(p)
+	if err != nil{
+		zap.L().Error("logic.GetPostList() failed",zap.Error(err))
+		ResponseError(c,CodeServerBusy)
+		return
 	}
 	ResponseSuccess(c,data)
 	// 返回响应
