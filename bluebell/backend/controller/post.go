@@ -60,3 +60,17 @@ func GetPostHandler(c *gin.Context){
 	// 3.返回响应
 	ResponseSuccess(c,data)
 }
+
+// GetPostListHandler 获取帖子列表的处理函数
+func GetPostListHandler(c *gin.Context){
+	// 获取分页参数
+	page,size := getPageInfo(c)
+	// 获取数据
+	data,err := logic.GetPostList(page,size)
+	if err != nil{
+		zap.L().Error("logic.GetPostList() failed",zap.Error(err))
+		ResponseError(c,CodeServerBusy)
+	}
+	ResponseSuccess(c,data)
+	// 返回响应
+}
