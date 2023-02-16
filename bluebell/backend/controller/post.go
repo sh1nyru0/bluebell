@@ -84,7 +84,7 @@ func GetPostListHandler(c *gin.Context){
 // 2.去redis查询id列表
 // 3.根据id去数据库查询帖子详细信息
 func GetPostListHandler2(c *gin.Context){
-	// GET请求参数(query string)：/api/v1/posts2?page=1&size=10&order=time
+	// GET请求的query string参数(query string)：/api/v1/posts2?page=1&size=10&order=time
 	// 初始化结构体时指定初始参数
 	p := &models.ParamPostList{
 		Page: 1,
@@ -96,8 +96,8 @@ func GetPostListHandler2(c *gin.Context){
 		ResponseError(c,CodeInvaildParam)
 		return
 	}
+	data,err := logic.GetPostListNew(p) // 更新： 合二为一
 	// 获取数据
-	data,err := logic.GetPostList2(p)
 	if err != nil{
 		zap.L().Error("logic.GetPostList() failed",zap.Error(err))
 		ResponseError(c,CodeServerBusy)
@@ -106,3 +106,5 @@ func GetPostListHandler2(c *gin.Context){
 	ResponseSuccess(c,data)
 	// 返回响应
 }
+
+
