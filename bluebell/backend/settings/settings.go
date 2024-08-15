@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/fsnotify/fsnotify"
-	"github.com/spf13/viper"
+	"github.com/spf13/viper" // Viper是适用于Go应用程序的完整配置解决方案
 )
 
 // Conf 全局变量，用来保存程序的所有配置信息

@@ -10,7 +10,6 @@ import (
 )
 
 
-
 // CreatePostHandler创建帖子的处理函数
 func CreatePostHandler(c *gin.Context){
 	//1.获取参数及参数的校验
@@ -52,7 +51,6 @@ func GetPostHandler(c *gin.Context){
 		return
 	}
 	// 2.根据id取出帖子数据
-
 	data,err := logic.GetPostById(pid)
 	if err != nil{
 		zap.L().Error("logic.GetPostById(pid) failed",zap.Error(err))
@@ -106,5 +104,3 @@ func GetPostListHandler2(c *gin.Context){
 	ResponseSuccess(c,data)
 	// 返回响应
 }
-
-

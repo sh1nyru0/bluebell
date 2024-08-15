@@ -194,7 +194,7 @@ func GetCommunityPostList(p *models.ParamPostList)(data []*models.ApiPostDetail,
 
 // GetPostListNew 将两个查询逻辑合为一个函数
 func GetPostListNew(p *models.ParamPostList)(data []*models.ApiPostDetail,err error){
-	//	根据请求参数的不同，执行不同的逻辑，
+	//	根据请求参数的不同，执行不同的逻辑
 	if p.CommunityID == 0 {
 		// 查所有
 		data,err = GetPostList2(p)

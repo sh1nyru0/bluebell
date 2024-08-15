@@ -24,7 +24,6 @@ func GetPostIDsInOrder(p *models.ParamPostList) ([]string, error) {
 	}
 	// 2.确定查询的索引起始点
 	return getIDsFormKey(key,p.Page,p.Size)
-	
 }
 
 // GetPostVoteData 根据ids查询每篇帖子的赞成票数
@@ -33,7 +32,7 @@ func GetPostVoteData(ids []string) (data []int64, err error) {
 	// data = make([]int64, 0,len(ids))
 	// for _,id := range ids{
 	// 	key := getRedisKey(KeyPostVotedZsetPF + id)
-	// 	// 查找ky中分数是1的元素的数量 -> 统计每篇帖子的赞成票的数量
+	// 	// 查找key中分数是1的元素的数量 -> 统计每篇帖子的赞成票的数量
 	// 	v := client.ZCount(key,"1","1").Val()
 	// 	data = append(data, v)
 	// }
@@ -62,13 +61,13 @@ func GetCommunityPostIDsInOrder(p *models.ParamPostList)([]string,error){
 	if p.Order == models.OrderScore{
 		orderKey = getRedisKey(KeyPostScoreZset)
 	}
-	// 使用 zinterstore 把分区的帖子set与帖子分数的zset 生成一个新的zset
+	// 使用 zinterstore 把社区的帖子set与帖子分数的zset 生成一个新的zset
 	// 针对新的zset 按之前的逻辑取数据
 
 	// 社区的key
 	cKey := getRedisKey(KeyCommunitySetPF + strconv.Itoa(int(p.CommunityID)))
 
-	// 利用缓存key减少zinterstroe执行的次数
+	// 利用缓存key减少zinterstore执行的次数
 	key := orderKey + strconv.Itoa(int(p.CommunityID))
 	if client.Exists(key).Val() < 1{
 		// 不存在，需要计算
